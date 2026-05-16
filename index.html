@@ -7,17 +7,48 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 30px; background-color: #f4f7f9; }
         .container { background-color: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #075AA8; border-bottom: 3px solid #075AA8; padding-bottom: 15px; margin-top: 0; }
+        
+        /* Contenedor para el título y el icono alineados */
+        .header-title { display: flex; align-items: center; gap: 20px; border-bottom: 3px solid #075AA8; padding-bottom: 15px; margin-top: 0; }
+        .header-title h1 { color: #075AA8; margin: 0; border: none; padding: 0; flex: 1; }
+        .app-icon { width: 70px; height: 70px; object-fit: contain; border-radius: 14px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
         h2 { color: #075AA8; margin-top: 35px; border-left: 5px solid #075AA8; padding-left: 15px; }
         p, li { font-size: 1.1em; }
-        .highlight-box { background-color: #eef6ff; padding: 20px; border: 1px solid #075AA8; border-radius: 6px; margin: 25px 0; }
+        .highlight-box { background-color: #eef6ff; padding: 30px; border: 1px solid #075AA8; border-radius: 6px; margin: 25px 0; }
         .footer { margin-top: 50px; font-size: 0.9em; color: #777; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
         strong { color: #000; }
+
+        /* Estilos del Formulario de Eliminación */
+        .delete-form { background: #fff; border: 1px solid #b3d4fc; padding: 25px; border-radius: 6px; margin-top: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .delete-form h3 { margin-top: 0; color: #d9534f; border-bottom: 2px solid #d9534f; padding-bottom: 8px; font-size: 1.3em; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.95em; color: #222; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; box-sizing: border-box; }
+        .form-group input:focus, .form-group select:focus { border-color: #075AA8; outline: none; }
+        .form-group-checkbox { display: flex; align-items: flex-start; gap: 10px; margin-top: 15px; }
+        .form-group-checkbox input { width: auto; margin-top: 4px; }
+        .form-group-checkbox label { font-weight: normal; font-size: 0.9em; color: #444; }
+        
+        .btn-submit { background-color: #d9534f; color: white; border: none; padding: 12px 20px; border-radius: 4px; font-size: 1.05em; font-weight: bold; width: 100%; cursor: pointer; transition: background 0.2s; text-transform: uppercase; margin-top: 10px; }
+        .btn-submit:hover { background-color: #c9302c; }
+
+        @media (max-width: 600px) {
+            .header-title { flex-direction: column-reverse; align-items: flex-start; gap: 15px; }
+            .app-icon { width: 60px; height: 60px; }
+            body { padding: 15px; }
+            .container { padding: 20px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Política de Privacidad de ELGAS</h1>
+        <!-- Título principal con la imagen icon.png incorporada lateralmente -->
+        <div class="header-title">
+            <h1>Política de Privacidad de ELGAS</h1>
+            <img src="icon.png" alt="Icono de ELGAS" class="app-icon">
+        </div>
+        
         <p><strong>Última actualización:</strong> 21 de marzo de 2026</p>
 
         <p>En <strong>ELGAS</strong>, la privacidad de nuestros usuarios es una prioridad. Esta política detalla cómo manejamos la información para ofrecer un servicio de entrega de gas eficiente y seguro en Ecuador.</p>
@@ -39,16 +70,54 @@
             <li>Enviar notificaciones push sobre el estado de su servicio.</li>
         </ul>
 
+        <!-- Sección 4 Corregida y Aumentada con Formulario -->
         <div class="highlight-box">
             <h2>4. Instrucciones para la Eliminación de Datos (User Data Deletion)</h2>
-            <p>De cumplimiento con las políticas de plataforma de Meta, proporcionamos un método sencillo para que cualquier usuario solicite la eliminación de su información:</p>
+            <p>En cumplimiento con las políticas de privacidad de Google Play Store y las condiciones de plataforma de Meta, proporcionamos un mecanismo claro y accesible para que cualquier usuario revoque sus permisos o solicite la eliminación permanente de su información:</p>
+            
+            <p><strong>Pasos para solicitar la eliminación de datos de forma manual:</strong></p>
             <ol>
-                <li>Envíe una solicitud por correo electrónico a: <strong>tgaplicacionec@gmail.com/strong></li>
-                <li>Use el asunto: <strong>"Eliminación de datos de usuario - ELGAS"</strong>.</li>
-                <li>Indique el correo electrónico o nombre de usuario asociado a su cuenta.</li>
-                <li>En un plazo máximo de <strong>48 a 72 horas</strong>, eliminaremos de forma definitiva de nuestros servidores de Firebase y bases de datos toda su información personal, historial de pedidos y registros de ubicación.</li>
+                <li>Envíe una solicitud por correo electrónico a: <strong>aplicacionesjfch@gmail.com</strong></li>
+                <li>Use el asunto obligatorio: <strong>"Eliminación de datos de usuario - ELGAS"</strong>.</li>
+                <li>Detalle el nombre completo y el correo electrónico con el que se registró en la app.</li>
+                <li>En un plazo máximo de <strong>48 a 72 horas</strong> hábiles, eliminaremos de forma definitiva de nuestros servidores de Firebase y bases de datos toda su información personal, historial de pedidos y registros de ubicación.</li>
             </ol>
             <p><em>Nota adicional: También puede revocar el acceso de la aplicación directamente desde su perfil de Facebook en la sección "Configuración y privacidad" > "Apps y sitios web".</em></p>
+
+            <!-- Formulario directo de solicitud de borrado -->
+            <div class="delete-form">
+                <h3>Formulario de Solicitud de Borrado de Datos</h3>
+                <p style="font-size: 0.95em; color: #555; margin-bottom: 20px;">Use este formulario para agilizar su proceso de baja. Al presionar el botón, se redactará automáticamente un correo electrónico con los parámetros correctos.</p>
+                
+                <form action="mailto:aplicacionesjfch@gmail.com?subject=Eliminacion%20de%20datos%20de%20usuario%20-%20ELGAS" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="form-name">Nombre completo del usuario:</label>
+                        <input type="text" id="form-name" name="Nombre de Usuario" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-email">Correo electrónico asociado a la cuenta:</label>
+                        <input type="email" id="form-email" name="Correo Asociado" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-reason">Motivo del borrado (Opcional):</label>
+                        <select id="form-reason" name="Motivo del Borrado">
+                            <option value="Ya no uso la aplicacion">Ya no uso la aplicación</option>
+                            <option value="Preocupaciones de privacidad">Preocupaciones de privacidad</option>
+                            <option value="Deseo reestablecer mis datos">Deseo restablecer mis datos</option>
+                            <option value="Otro motivo">Otro motivo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="form-confirm" name="Confirmacion del usuario" value="ACEPTADO" required>
+                        <label for="form-confirm">Confirmo que deseo que se eliminen permanentemente mis datos de acceso, perfiles de conductor/cliente e historial de ubicaciones en ELGAS. Esta acción es irreversible.</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Solicitud de Borrado</button>
+                </form>
+            </div>
         </div>
 
         <h2>5. Seguridad y Terceros</h2>
@@ -56,7 +125,7 @@
 
         <div class="footer">
             <p>&copy; 2026 ELGAS - Desarrollado en Ecuador.</p>
-            <p>Contacto de soporte: <strong>tgaplicacionec@gmail.com</strong></p>
+            <p>Contacto de soporte: <strong>aplicacionesjfch@gmail.com</strong></p>
         </div>
     </div>
 </body>
